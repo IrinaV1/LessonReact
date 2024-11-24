@@ -1,0 +1,47 @@
+.navbar{
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 4px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+
+    background: #242424;
+ 
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+
+}
+.logo:hover {
+    color: #eecd87; /* Более насыщенный розовый при наведении */
+  }
+
+  .navbar_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    font-size: 1.3rem;
+  }
+.menu{
+    padding: 0 30px;
+    justify-content: start;
+}
+.menu:hover{
+ color: #f1eaea;
+ font-weight: 400;
+ box-shadow: 1px 2px 10px #d82d2d;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px;
+}
