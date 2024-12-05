@@ -11,11 +11,13 @@ function Card() {
    
  
   <div>
-    <button>+</button>
+  <div><span className={styles.price}>10 $</span></div>
+    <button className={styles.btn_plus}>+</button>
     <span className={styles.total}>1</span>
-    <button>-</button>
-    <div>  <span className={styles.price}>100</span></div>
-  <button>BUY</button>
+    <button className={styles.btn_min}>-</button>
+   
+ <div> <button className={styles.btn_buy}>BUY</button> </div>
+
    </div>
     </div>
   )

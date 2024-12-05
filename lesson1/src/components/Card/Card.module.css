@@ -8,8 +8,29 @@
   text-align: center;
   box-sizing: border-box;
 }
+.btn_plus{
+  margin: 0 15px;
+}
+.btn_min{
+  margin: 0 15px 5px;
+  
+}
+.btn_buy{
+  padding: 10px 60px;
+  color: #fff;
+}
+.total{
+  margin: 0 10px;
+}
+.price{
+  padding: 10px;
+  margin: 10px;
+}
 .productImage{
   max-width: 300px;
   height: 200px;
   border-radius: 8px;
+}
+.title_product{
+  padding: 5px 0 10px;
 }
