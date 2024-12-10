@@ -11,6 +11,7 @@ function Main() {
 
       <section className={styles.benefits}>
         <h2 className={styles.benefits_title}>Почему стоит выбрать нас?</h2>
+        <div className={styles.benefit_items}> 
         <div className={styles.benefit_item}>
           <h3>Кофе</h3>
           <p>
@@ -29,7 +30,8 @@ function Main() {
             Мороженое — это удовольствие, которое приносит радость каждому. Наш десерт отличается нежной текстурой и натуральным вкусом, создавая идеальный баланс сладости и свежести. Оно дарит наслаждение в любое время и подходит для любого настроения.
           </p>
         </div>
-      </section>
+        </div>
+      </section> 
   </main>
   )
 }

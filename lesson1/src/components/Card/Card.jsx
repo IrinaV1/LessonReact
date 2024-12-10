@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./Card.module.css";
 import productImage from "../../assets/images/img2.webp"
 
 function Card() {
+const [item, setItem] = useState(1);
+const [cost, setCost] = useState(10);
+
+function btnPlus() {
+
+ setItem(item + 1);
+ setCost(cost + 10);
+}
+
+function btnMinus() {
+if (item > 1) {
+  setItem(item - 1);}
+
+  if (item > 1) {
+  setCost(cost - 10);}
+ }
+
   return (
     <div className={styles.card}>
       <img className={styles.productImage} src={productImage} alt='img1'/>
@@ -11,12 +28,12 @@ function Card() {
    
  
   <div>
-  <div><span className={styles.price}>10 $</span></div>
-    <button className={styles.btn_plus}>+</button>
-    <span className={styles.total}>1</span>
-    <button className={styles.btn_min}>-</button>
+  <div><span className={styles.price}>{cost} $</span></div>
+    <button onClick={btnPlus} className={styles.btn_plus}>+</button>
+    <span className={styles.total}>{item}</span>
+    <button onClick={btnMinus} className={styles.btn_min}>-</button>
    
- <div> <button className={styles.btn_buy}>BUY</button> </div>
+ <div> <button onClick={() => btnPlus } className={styles.btn_buy}>BUY</button> </div>
 
    </div>
     </div>

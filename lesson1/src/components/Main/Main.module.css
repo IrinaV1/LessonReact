@@ -29,16 +29,30 @@
   }
   
   .benefit_item {
+ 
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-align: left;
     margin-bottom: 20px;
+    box-shadow: 5px 5px 8px #333;
   }
   
   .benefit_item h3 {
     font-size: 1.5rem;
     color: #555;
+    text-align: center;
+
   }
   
   .benefit_item p {
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
+  }
+  .benefit_items{
+    display: grid;
+  grid-template-columns: auto auto auto;
+    gap: 1rem;
+    
   }
