@@ -7,15 +7,22 @@ import Main from './components/Main/Main';
 import Cards from './components/Cards/Cards';
 import Footer from './components/Footer/Footer';
 
+
 function App() {
 
+const [cartItems, setCartItems] = useState([]);
+
+
+const addToCart = (item) => {
+setCartItems((prevCartItems) => [...prevCartItems, item])
+}
 
   return (
     <>
- <Navbar />
+ <Navbar cartItems={cartItems} />
  <Header />
 <Main />
-<Cards />
+<Cards addToCart={addToCart}/>
    <Footer />  
       
     </>

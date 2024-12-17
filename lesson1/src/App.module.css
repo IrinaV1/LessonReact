@@ -6,53 +6,50 @@
 }
 
 
-/* Убираем отступы */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Обеспечивает правильный расчет размеров блоков */
+  box-sizing: border-box; 
 }
 
-/* Убираем стандартное оформление списков */
 ol, ul {
   list-style: none;
 }
 
-/* Убираем стандартное оформление ссылок */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Убираем границы у элементов форм */
+
 input, button, textarea, select {
   border: none;
   outline: none;
-  font: inherit; /* Наследуем шрифты для согласованности */
+  font: inherit; 
 }
 
-/* Убираем стандартные стили у таблиц */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Устанавливаем базовые размеры шрифта и линии текста */
+
 html {
-  font-size: 16px; /* Базовый размер текста */
-  line-height: 1.5; /* Комфортное расстояние между строками */
+  font-size: 16px;
+  line-height: 1.5; 
 }
 
-/* Удаляем дополнительные стили кнопок и добавляем интерактивность */
+
 button {
  
   cursor: pointer;
 }
 
-/* Убираем стандартное оформление картинок */
 
 
-/* Удаляем стандартные стили полей форм */
+
 textarea {
-  resize: none; /* Отключаем изменение размеров */
+  resize: none; 
 }
