@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import styles from './Navbar.module.css';
 import { GiCupcake } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
 
 function Navbar({cartItems}) {
 
@@ -55,22 +58,27 @@ onClick={toggleCart}
           </button>
           <div className={styles.cartContent}>
             <p>Корзина</p>
-      
+     <p>Total: $</p>
          {cartItems.length === 0 ? 
           ( 
           <p>Hello</p> 
           ) : (
             cartItems.map((item, index) => (
 <div key={index} className={styles.cartItem}>
+<div className={styles.cartItem_buy}>
+  <div>
                   <img src={item.image} alt={item.name} className={styles.cartImage} />
-                  <div>
+    </div>
+    <div>
+
                     <p>{item.name}</p>
                     <p>{item.description}</p>
                     <p>Цена: {item.cost} $</p>
-                        <button onClick={() => btnPlus} className={styles.btn_plus}>+</button>
+                        <button onClick={() => btnPlus} className={styles.btn_plus}><FaPlus /></button>
                         <span className={styles.total}>{item.quantity}</span>
-                        <button onClick={() => btnMinus} className={styles.btn_min}>-</button>
-                    
+                        <button onClick={() => btnMinus} className={styles.btn_min}><FaMinus /></button>
+             </div>       
+                    <div><button className={styles.btn_del}><MdDeleteForever size={32}/></button> </div>
                   </div>
                 </div>
             ))
