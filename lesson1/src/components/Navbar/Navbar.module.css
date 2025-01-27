@@ -132,9 +132,11 @@
   .btn_min:active{
     color: dimgrey;
   }
-  .total{
+  span.total{
     color: #242424;
-    background-color: #eecd87;
+    background-color: #f8c662;
+   width: 3px;
+   padding: 5px 10px;
   }
 
   .cartImage{
@@ -166,4 +168,20 @@ margin: 0 auto ;
   }
   .btn_del:active{
     color: dimgrey;
+  }
+
+  @media (min-width: 1200px){
+
+  }
+  
+  @media(min-width: 992px){
+  
+  }
+  
+  @media (min-width: 768px){
+   
+  }
+  
+  @media (min-width: 576px){
+
   }

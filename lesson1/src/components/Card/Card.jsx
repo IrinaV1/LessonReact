@@ -2,18 +2,8 @@ import React from 'react';
 import styles from "./Card.module.css";
 import productImage from "../../assets/images/img2.webp"
 
-function Card({addToCart}) {
+function Card({product, addToCart}) {
 
-
-
-const product = {
-id: Math.random(),
-name: 'Creme',
-description: "Chocolate creme with cherry",
-cost: 20,
-image: productImage,
-quantity: 1,
-}
 
 
 
@@ -22,7 +12,7 @@ quantity: 1,
     <div className={styles.card}>
       <img className={styles.productImage} src={productImage} alt='img1'/>
       <h2 className={styles.title}>{product.name}</h2>
-<p className={styles.title_product}> Chocolate creme with cherry </p>
+<p className={styles.title_product}>{product.description} </p>
    
  
   <div>
