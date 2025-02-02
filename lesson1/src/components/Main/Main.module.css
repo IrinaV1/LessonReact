@@ -56,3 +56,22 @@
     gap: 1rem;
     
   }
+
+
+  @media (max-width: 576px){
+    .benefit_items{
+   
+    grid-template-columns: 1fr;
+ 
+      
+    }
+    .benefit_item {
+ 
+      border: none;
+      border-radius: 8px;
+      padding: 5px 2px;
+      text-align: left;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px 8px #333;
+    }
+  }

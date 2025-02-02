@@ -53,3 +53,11 @@ button {
 textarea {
   resize: none; 
 }
+  
+@media (min-width: 576px){
+  #root {
+    max-width: 576px;
+   
+  }
+  
+}

@@ -7,6 +7,8 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  text-decoration: none ;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,7 +37,7 @@ button {
   transition: border-color 0.25s;
 }
 
-
-@media (min-width: 576px){
+a {
+  text-decoration: none ;
 
 }

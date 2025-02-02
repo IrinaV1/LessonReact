@@ -14,10 +14,8 @@ function Navbar({cartItems, setCartItems}) {
 
   const toggleCart = () => {
   setIsCartOpen(!isCartOpen);
+  
   };
-
-
- 
 
   const btnPlus = (productId) => {
 
@@ -66,7 +64,7 @@ onClick={toggleCart}
 
 {isCartOpen && (
         <div className={styles.cartModal}>
-          <button className={styles.closeButton} onClick={() => setIsCartOpen(false)}>
+          <button className={styles.closeButton} onClick={() => toggleCart()}>
             ✖
           </button>
           <div className={styles.cartContent}>
