@@ -2,6 +2,8 @@ import React  from "react";
 import styles from "./Cards.module.css";
 import Card from "../Card/Card";
 import productImage from "../../assets/images/img2.webp"
+
+
 function Cards({addToCart}) {
   
   

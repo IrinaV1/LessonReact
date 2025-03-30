@@ -1,15 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import styles from './Navbar.module.css';
 import { GiCupcake } from "react-icons/gi";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
+import { FaShoppingCart, FaPlus, FaMinus  } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import { increaseQuantity, decreaseQuantity, removeFromCart} from "../../redux/reducers/cartSlice"
 
-function Navbar({cartItems, setCartItems}) {
+function Navbar() {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
-
+const dispatch = useDispatch();
+const cartItems = useSelector((state) => state.cart.items)
   
 
   const toggleCart = () => {
@@ -17,7 +18,7 @@ function Navbar({cartItems, setCartItems}) {
   
   };
 
-  const btnPlus = (productId) => {
+ /* const btnPlus = (productId) => {
 
     const updatedCart = cartItems.map((item) => 
       item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
@@ -38,7 +39,7 @@ function Navbar({cartItems, setCartItems}) {
    const deleteItem = (productId) => {
     const updatedCart = cartItems.filter((item) => item.id !== productId);
     setCartItems(updatedCart);
-  };
+  };*/
 
   // Подсчёт общей суммы корзины
   const calculateTotal = () => {
@@ -70,6 +71,7 @@ onClick={toggleCart}
           <div className={styles.cartContent}>
             <p>Корзина</p>
      <p>Total: {calculateTotal()}$</p>
+
          {cartItems.length === 0 ? 
           ( 
           <p>Hello</p> 
@@ -85,11 +87,11 @@ onClick={toggleCart}
                     <p>{item.name}</p>
                     <p>{item.description}</p>
                     <p>Цена: {item.cost} $</p>
-                        <button onClick={() => btnPlus(item.id)} className={styles.btn_plus}><FaPlus /></button>
+                        <button onClick={() => dispatch(increaseQuantity(item.id))} className={styles.btn_plus}><FaPlus /></button>
                         <span className={styles.total}>{item.quantity}</span>
-                        <button onClick={() => btnMinus(item.id)} className={styles.btn_min}><FaMinus /></button>
+                        <button onClick={() => dispatch(decreaseQuantity(item.id))} className={styles.btn_min}><FaMinus /></button>
              </div>       
-                    <div><button onClick={() => deleteItem(item.id)} className={styles.btn_del}><MdDeleteForever size={32}/></button> </div>
+                    <div><button onClick={() => dispatch(removeFromCart(item.id))} className={styles.btn_del}><MdDeleteForever size={32}/></button> </div>
                   </div>
                 </div>
             ))
@@ -105,4 +107,4 @@ onClick={toggleCart}
 }
 
 
-export default Navbar
+export default Navbar;

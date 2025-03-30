@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from "./Card.module.css";
 import productImage from "../../assets/images/img2.webp"
+import { useDispatch } from 'react-redux';
+import { addToCart } from "../../redux/reducers/cartSlice"
 
-function Card({product, addToCart}) {
 
+function Card({product}) {
 
+const dispatch = useDispatch();
 
 
 
@@ -19,7 +22,7 @@ function Card({product, addToCart}) {
   <div><span className={styles.price}>{product.cost} $</span></div>
 
    
- <div> <button onClick={() => addToCart(product)} className={styles.btn_buy}>BUY</button> </div>
+ <div> <button onClick={() => dispatch(addToCart(product))} className={styles.btn_buy}>BUY</button> </div>
 
    </div>
     </div>
