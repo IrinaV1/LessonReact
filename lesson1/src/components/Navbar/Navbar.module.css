@@ -212,10 +212,12 @@ margin: 0 auto ;
       padding: 2px 0px;
       font-size: 0.9rem;
 margin: 0px;
+flex-wrap: wrap;
     }
     .menu{
       padding: 0 3px;
       justify-content: center;
+      flex-wrap: wrap;
   }
   .box{
 
